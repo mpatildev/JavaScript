@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f4f0;
+    margin: 0;
+    padding: 25px 40px;
+}
+
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    background-color: #263b50;
+    font-size: 30px;
+    padding: 25px;
+    margin: 0 0 25px;
+    border-radius: 12px;
+    letter-spacing: 1px;
+}
+
+
+.api {
+    text-align: center;
+    font-size: 14px;
+    color: #38765b;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+
+#products {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #dedbd3;
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(38, 59, 80, 0.06);
+    transition: 0.3s;
+}
+
+
+.card:hover {
+    border-color: #8b9baa;
+    box-shadow: 0 8px 18px rgba(38, 59, 80, 0.12);
+    transform: translateY(-4px);
+}
+
+
+.card h2 {
+    color: #929292;
+    font-size: 12px;
+    font-weight: normal;
+    border-bottom: 1px solid #eeeeeb;
+    padding-bottom: 10px;
+}
+
+
+.card h3 {
+    color: #263b50;
+    font-size: 15px;
+    line-height: 1.5;
+    min-height: 45px;
+}
+
+
+.card .price {
+    color: #52745e;
+    background-color: #edf3ed;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 9px;
+    border-radius: 7px;
+}
+
+
+.card p {
+    color: #777777;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+.card img {
+    width: 115px;
+    height: 125px;
+    object-fit: contain;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #eeeeeb;
+    border-radius: 8px;
+    background-color: #fafaf8;
+}
+
+.completion {
+    text-align: center;
+    color: #526b80;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px;
+    margin: 15px auto 25px;
+    width: fit-content;
+}
+
+@media (max-width: 1000px) {
+    #products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 550px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    #products {
+        grid-template-columns: 1fr;
+    }
+}
